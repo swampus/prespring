@@ -7,6 +7,9 @@ public class AddressLocatorService {
     private String country;
     private ComponentConfig componentConfig;
 
+    public AddressLocatorService() {
+    }
+
     public AddressLocatorService(String dbUrl,
                                  String country,
                                  ComponentConfig componentConfig) {
@@ -17,5 +20,29 @@ public class AddressLocatorService {
 
     public void doJob() {
         System.out.println("AddressLocatorDoJob");
+    }
+
+    public String getDbUrl() {
+        return dbUrl;
+    }
+
+    public void setDbUrl(String dbUrl) {
+        this.dbUrl = dbUrl;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public ComponentConfig getComponentConfig() {
+        return componentConfig;
+    }
+
+    public void setComponentConfig(ComponentConfig componentConfig) {
+        this.componentConfig = componentConfig;
     }
 }

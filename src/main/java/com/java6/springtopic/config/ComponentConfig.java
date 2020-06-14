@@ -5,6 +5,9 @@ public class ComponentConfig {
     private String key2;
     private String key3;
 
+    public ComponentConfig() {
+    }
+
     public ComponentConfig(String key1, String key2, String key3) {
         this.key1 = key1;
         this.key2 = key2;
@@ -33,5 +36,14 @@ public class ComponentConfig {
 
     public void setKey3(String key3) {
         this.key3 = key3;
+    }
+
+    @Override
+    public String toString() {
+        return "ComponentConfig{" +
+                "key1='" + key1 + '\'' +
+                ", key2='" + key2 + '\'' +
+                ", key3='" + key3 + '\'' +
+                '}';
     }
 }

@@ -18,11 +18,32 @@
         <property name="key3" value="K3-2"/>
     </bean>
 
+
     <bean id="addressLocatorService"
-          class="com.java6.springtopic.AddressLocatorService">
+          class="com.java6.springtopic.service.AddressLocatorService">
         <property name="dbUrl" value="http://gooogle.lv"/>
         <property name="country" value="LVA"/>
         <property name="componentConfig" ref="componentConfig1"/>
-
     </bean>
+    <bean id="photoRecognitionService"
+          class="com.java6.springtopic.service.PhotoRecognitionService">
+        <property name="authKey" value="AUTH"/>
+        <property name="processId" value="11" />
+        <property name="strDecorator" value="DECORATE"/>
+        <property name="componentConfig" ref="componentConfig2"/>
+    </bean>
+
+    <bean id="securityProcessor"
+          class="com.java6.springtopic.processor.SecurityProcessor">
+        <property name="addressLocatorService" ref="addressLocatorService"/>
+        <property name="photoRecognitionService" ref="photoRecognitionService"/>
+    </bean>
+
+
+    <bean id="userProcessor"
+          class="com.java6.springtopic.processor.UserProcessor">
+        <property name="addressLocatorService" ref="addressLocatorService"/>
+        <property name="photoRecognitionService" ref="photoRecognitionService"/>
+    </bean>
+
 </beans>

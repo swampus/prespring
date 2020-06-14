@@ -8,6 +8,9 @@ public class PhotoRecognitionService {
     private String strDecorator;
     private ComponentConfig componentConfig;
 
+    public PhotoRecognitionService() {
+    }
+
     public PhotoRecognitionService(String authKey,
                                    int processId,
                                    String strDecorator,
@@ -20,5 +23,37 @@ public class PhotoRecognitionService {
 
     public void doJob() {
         System.out.println("JOB: " + strDecorator);
+    }
+
+    public String getAuthKey() {
+        return authKey;
+    }
+
+    public void setAuthKey(String authKey) {
+        this.authKey = authKey;
+    }
+
+    public int getProcessId() {
+        return processId;
+    }
+
+    public void setProcessId(int processId) {
+        this.processId = processId;
+    }
+
+    public String getStrDecorator() {
+        return strDecorator;
+    }
+
+    public void setStrDecorator(String strDecorator) {
+        this.strDecorator = strDecorator;
+    }
+
+    public ComponentConfig getComponentConfig() {
+        return componentConfig;
+    }
+
+    public void setComponentConfig(ComponentConfig componentConfig) {
+        this.componentConfig = componentConfig;
     }
 }

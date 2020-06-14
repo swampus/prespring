@@ -5,14 +5,25 @@ import com.java6.springtopic.service.AddressLocatorService;
 import com.java6.springtopic.service.PhotoRecognitionService;
 
 public class UserProcessor {
-    private ComponentConfig componentConfig1 = new ComponentConfig("K1","K2","K3");
-    private ComponentConfig componentConfig2 = new ComponentConfig("K11","K22","K33");
 
-    private AddressLocatorService addressLocatorService
-            = new AddressLocatorService("asd","lva", componentConfig1);
-    private PhotoRecognitionService photoRecognitionService
-            = new PhotoRecognitionService(
-                    "Key1", 11, "decorator", componentConfig2);
+    private AddressLocatorService addressLocatorService;
+    private PhotoRecognitionService photoRecognitionService;
+
+    public AddressLocatorService getAddressLocatorService() {
+        return addressLocatorService;
+    }
+
+    public void setAddressLocatorService(AddressLocatorService addressLocatorService) {
+        this.addressLocatorService = addressLocatorService;
+    }
+
+    public PhotoRecognitionService getPhotoRecognitionService() {
+        return photoRecognitionService;
+    }
+
+    public void setPhotoRecognitionService(PhotoRecognitionService photoRecognitionService) {
+        this.photoRecognitionService = photoRecognitionService;
+    }
 
     public void doJob(){
         addressLocatorService.doJob();
