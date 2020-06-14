@@ -2,6 +2,7 @@ package com.java6.springtopic;
 
 import com.java6.springtopic.processor.SecurityProcessor;
 import com.java6.springtopic.processor.UserProcessor;
+import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -16,9 +17,11 @@ public class Umain {
         ApplicationContext context
                 = new ClassPathXmlApplicationContext("beans.xml");
 
-        MyFirstSpringBean myFirstSpringBean
-                = (MyFirstSpringBean) context.getBean("myFirstSpringBean");
-        myFirstSpringBean.drukat();
+
+            MyFirstSpringBean myFirstSpringBean
+                    = (MyFirstSpringBean) context.getBean("myFirstSpringBean");
+            myFirstSpringBean.drukat();
+
 
     }
 }
