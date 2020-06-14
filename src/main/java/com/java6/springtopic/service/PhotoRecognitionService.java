@@ -22,7 +22,7 @@ public class PhotoRecognitionService {
     }
 
     public void doJob() {
-        System.out.println("JOB: " + strDecorator);
+        System.out.println("JOB: " + strDecorator + " " + componentConfig);
     }
 
     public String getAuthKey() {

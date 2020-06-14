@@ -19,7 +19,7 @@ public class AddressLocatorService {
     }
 
     public void doJob() {
-        System.out.println("AddressLocatorDoJob");
+        System.out.println("AddressLocatorDoJob: " + componentConfig);
     }
 
     public String getDbUrl() {

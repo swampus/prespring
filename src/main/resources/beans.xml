@@ -11,6 +11,8 @@
         <property name="key2" value="K2"/>
         <property name="key3" value="K3"/>
     </bean>
+
+
     <bean id="componentConfig2"
           class="com.java6.springtopic.config.ComponentConfig">
         <property name="key1" value="K1-2"/>
