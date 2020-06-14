@@ -5,12 +5,24 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="myFirstSpringBean"
-          class="com.java6.springtopic.MyFirstSpringBean">
-        <property name="abcd" value="1111111111111111"/>
+    <bean id="componentConfig1"
+          class="com.java6.springtopic.config.ComponentConfig">
+        <property name="key1" value="K1"/>
+        <property name="key2" value="K2"/>
+        <property name="key3" value="K3"/>
     </bean>
-    <bean id="myFirstSpringBean2"
-          class="com.java6.springtopic.MyFirstSpringBean">
-        <property name="abcd" value="22222222222222222222"/>
+    <bean id="componentConfig2"
+          class="com.java6.springtopic.config.ComponentConfig">
+        <property name="key1" value="K1-2"/>
+        <property name="key2" value="K2-2"/>
+        <property name="key3" value="K3-2"/>
+    </bean>
+
+    <bean id="addressLocatorService"
+          class="com.java6.springtopic.AddressLocatorService">
+        <property name="dbUrl" value="http://gooogle.lv"/>
+        <property name="country" value="LVA"/>
+        <property name="componentConfig" ref="componentConfig1"/>
+
     </bean>
 </beans>
